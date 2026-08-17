@@ -26,11 +26,11 @@ public class MedianFinder {
     }
 
     public double findMedian() {
-        if (left.size() > right.size()) {
-            return left.peek();
+        if (left.isEmpty()) return 0;
+        if (left.size() == right.size()) {
+            return ((long)left.peek() + right.peek()) / 2.0;
         }
-
-        return ((long) left.peek() + right.peek()) / 2.0;
+        return left.peek();
     }
 
     public static void main(String[] args) {
